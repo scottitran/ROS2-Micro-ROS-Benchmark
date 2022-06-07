@@ -1,0 +1,135 @@
+publisher:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg"
+    ping_sub_topic: "pong_msg"
+    
+    msg_num:  30
+  
+    qos_depth:  1000
+    qos_best_effort: True
+    qos_durability_transient_local: False
+
+publisher1:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg1"
+    ping_sub_topic: "pong_msg1"
+    
+    msg_num:  30
+
+    qos_depth : 10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher2:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg2"
+    ping_sub_topic: "pong_msg2"
+
+    msg_num:  30
+
+    qos_depth : 10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+
+publisher3:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg3"
+    ping_sub_topic: "pong_msg3"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+
+publisher4:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg4"
+    ping_sub_topic: "pong_msg4"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher5:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg5"
+    ping_sub_topic: "pong_msg5"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher6:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg6"
+    ping_sub_topic: "pong_msg6"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher7:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg7"
+    ping_sub_topic: "pong_msg7"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher8:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg8"
+    ping_sub_topic: "pong_msg8"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher9:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg9"
+    ping_sub_topic: "pong_msg9"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher10:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg10"
+    ping_sub_topic: "pong_msg10"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+publisher11:
+  ros__parameters:
+    pub_frequency: 1.0
+    ping_pub_topic: "ping_msg11"
+    ping_sub_topic: "pong_msg11"
+
+    msg_num:  30
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
