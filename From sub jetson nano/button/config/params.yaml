@@ -1,0 +1,152 @@
+subscriber:
+  ros__parameters:
+    pong_pub_topic: "pong_msg"
+    pong_sub_topic: "ping_msg"
+
+    qos_depth:  1000
+    qos_best_effort: True
+    qos_durability_transient_local: False
+
+subscriber1:
+  ros__parameters:
+    pong_pub_topic: "ping_msg2"
+    pong_sub_topic: "ping_msg1"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber2:
+  ros__parameters:
+    pong_pub_topic: "ping_msg3"
+    pong_sub_topic: "ping_msg2"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber3:
+  ros__parameters:
+    pong_pub_topic: "ping_msg4"
+    pong_sub_topic: "ping_msg3"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber4:
+  ros__parameters:
+    pong_pub_topic: "ping_msg5"
+    pong_sub_topic: "ping_msg4"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber5:
+  ros__parameters:
+    pong_pub_topic: "ping_msg6"
+    pong_sub_topic: "ping_msg5"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber6:
+  ros__parameters:
+    pong_pub_topic: "ping_msg7"
+    pong_sub_topic: "ping_msg6"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber7:
+  ros__parameters:
+    pong_pub_topic: "ping_msg8"
+    pong_sub_topic: "ping_msg7"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber8:
+  ros__parameters:
+    pong_pub_topic: "ping_msg9"
+    pong_sub_topic: "ping_msg8"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber9:
+  ros__parameters:
+    pong_pub_topic: "ping_msg10"
+    pong_sub_topic: "ping_msg9"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber10:
+  ros__parameters:
+    pong_pub_topic: "ping_msg11"
+    pong_sub_topic: "ping_msg10"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber11:
+  ros__parameters:
+    pong_pub_topic: "ping_msg12"
+    pong_sub_topic: "ping_msg11"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber12:
+  ros__parameters:
+    pong_pub_topic: "ping_msg13"
+    pong_sub_topic: "ping_msg12"
+
+    qos_depth:  1000
+    qos_best_effort: False
+    qos_durability_transient_local: False
+
+subscriber13:
+  ros__parameters:
+    pong_pub_topic: "ping_msg14"
+    pong_sub_topic: "ping_msg13"
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+
+subscriber14:
+  ros__parameters:
+    pong_pub_topic: "ping_msg15"
+    pong_sub_topic: "ping_msg14"
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+
+subscriber15:
+  ros__parameters:
+    pong_pub_topic: "ping_msg16"
+    pong_sub_topic: "ping_msg15"
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
+
+subscriber16:
+  ros__parameters:
+    pong_pub_topic: "ping_msg17"
+    pong_sub_topic: "ping_msg16"
+
+    qos_depth:  10
+    qos_best_effort: True
+    qos_durability_transient_local: False
