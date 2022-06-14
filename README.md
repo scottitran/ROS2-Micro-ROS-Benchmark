@@ -1,5 +1,6 @@
 # Testing Usability of ROS2 and Micro-ROS 
-This respository contain programs that conducted during the testing. Besides, this also include the guidline how to install and setup hardware and sofware which were used in the project. 
+This respository contain source code for ROS2 and Micro-ROS applications that conducted during the testing. The source code contain three different program languages including Python, C and C++. However, the focus only in Python for ROS2 and C for Micro-ROS. 
+Besides, this also include the guidline how to install and setup hardware and sofware which were used in the project. 
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -24,17 +25,15 @@ This respository contain programs that conducted during the testing. Besides, th
 
 
 ## Technologies Used
-Jetson Nano is the hardware used in this project to run ROS2. However, basic OS that Jetson Nano use is Ubuntu 18.04 and it not up to date to run ROS2 foxy. There are three ways to run Ubuntu 20.04 on Jetson Nano. 
-- Install [Xubuntu 20.04](https://forums.developer.nvidia.com/t/xubuntu-20-04-focal-fossa-l4t-r32-3-1-custom-image-for-the-jetson-nano/121768) Focal Fossa L4T - a custom image for Jetson Nano
-- Upgrade Ubuntu 18.04 to Ubuntu 20.04 by follow [this tutorial](https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html)
-- Running Ubuntu 20.04 on Docker
+
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+List the parameters are used to evaluate:
+- Latency
+- Memory Consumption
+- Scalability
+- Reliability
 
 
 ## Screenshots
@@ -45,7 +44,10 @@ List the ready features here:
 ## Setup
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+Jetson Nano is the hardware used in this project to run ROS2. However, basic OS that Jetson Nano use is Ubuntu 18.04 and it not up to date to run ROS2 foxy. There are three ways to run Ubuntu 20.04 on Jetson Nano. 
+- Install [Xubuntu 20.04](https://forums.developer.nvidia.com/t/xubuntu-20-04-focal-fossa-l4t-r32-3-1-custom-image-for-the-jetson-nano/121768) Focal Fossa L4T - a custom image for Jetson Nano
+- Upgrade Ubuntu 18.04 to Ubuntu 20.04 by follow [this tutorial](https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html)
+- Running Ubuntu 20.04 on Docker
 
 
 ## Usage
@@ -79,7 +81,7 @@ Give credit here.
 
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by [@CuongTran](https://github.com/scottitran) - feel free to contact me!
 
 
 <!-- Optional -->
