@@ -15,7 +15,6 @@ List the parameters are used to evaluate:
 - Scalability
 - Reliability
 
-
 ## Getting Started 
 What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
 
@@ -59,10 +58,6 @@ Give credit here.
 - This project was inspired by...
 - This project was based on [this tutorial](https://www.example.com).
 - Many thanks to...
-
-
-## Contact
-Created by [@CuongTran](https://github.com/scottitran) - feel free to contact me!
 
 ---
 ## Author 
