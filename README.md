@@ -1,4 +1,4 @@
-# Testing Usability of ROS2 and Micro-ROS 
+# Testing Usability of ROS2 and Micro-ROS Demo
 
 ## About : 
 This respository contains source code for ROS2 and Micro-ROS applications that were used during the testing for Graduation Assignment at Benchmark. The source code contains three different program languages including Python, C and C++. However, the focus only in Python for ROS2 and C for Micro-ROS. 
@@ -23,7 +23,7 @@ Jetson Nano is the hardware used in this project to run ROS2. However, basic OS 
 - Running Ubuntu 20.04 on Docker
 
 
-## Build
+## Build Demo
 To run project demo, this respository need to be cloned.
 - Then source code have to be build by using this command:
 
@@ -36,11 +36,7 @@ To run project demo, this respository need to be cloned.
 
 - Now the program can be run by using launch file:
 
-`ros2 launch demo demo.launch.py`
-
-
-## Use
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+> `ros2 launch demo demo.launch.py`
 
 
 ## Overview of parameters:
@@ -61,11 +57,13 @@ QoS profiles:
 - Depth
 
 
-## Start multi processes
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+## Debug ROS2 Topic in terminal
+Below only include topic commands because this project only use _topic_ communication mechanism
+- `ros2 topic list`: to see all of topics which are running in the network.
+- `ros2 topic echo /<topic_name>`: all of data in message will be shown in terminal 
+- `ros2 topic info /<topic_name> -v`: this command will check all the information of topic such as _msg_type_, _QoS_Profile_. Morverover, it also check how many publisher and subscriber are using this topic to communicate
+- `ros2 topic hz /<topic_name>`: to check the _min_, _max_ and _average_ value of publisher frequency of this topic
+- `ros2 topic bw /<topic_name>`: to check the _min_, _max_ and _average_ value of how much message size used in this topic
 
 ---
 ## Author 
