@@ -1,8 +1,8 @@
 from setuptools import setup
-import os
 from glob import glob
+import os
 
-package_name = 'button'
+package_name = 'demo'
 
 setup(
     name=package_name,
@@ -18,15 +18,14 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='cuong',
-    maintainer_email='cuong@todo.todo',
+    maintainer_email='cuongtdtqb@gmail.com',
     description='TODO: Package description',
-    license='Apache License 2.0',
+    license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'talker = button.publisher:main',
-            'talker1 = button.publisher1:main',
-            'listener = button.subscriber:main'
+            'talker = demo.sender:main',
+            'listener = demo.receiver:main'
         ],
     },
 )

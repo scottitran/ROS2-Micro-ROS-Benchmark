@@ -7,38 +7,31 @@ from launch_ros.actions import Node
 def generate_launch_description():
     ld = LaunchDescription()
 
+    # Read config file from YAML file
     config = os.path.join(
-        get_package_share_directory('button'),
+        get_package_share_directory('demo'),
         'config',
         'params.yaml'
         )
-    
+        
     node_1 = Node(
-            package='button',
+            package='demo',
             # namespace='sub1',
             executable='talker',
-            name='publisher',
+            name='sender',
             parameters=[config]    
         )
 
     node_2 = Node(
-            package='button',
+            package='demo',
             # namespace='sub1',
             executable='listener',
-            name='subscriber',
+            name='receiver',
             parameters=[config] 
         )
-
-    node_3 = Node(
-            package='button',
-            # namespace='sub1',
-            executable='listener',
-            name='subscriber',
-            parameters=[config] 
-        )      
+    
 
     ld.add_action(node_1)
-    # ld.add_action(node_2)
-    # ld.add_action(node_3)
+    ld.add_action(node_2)
 
     return ld

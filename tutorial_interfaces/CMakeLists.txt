@@ -33,12 +33,10 @@ if(BUILD_TESTING)
 endif()
 
 find_package(rosidl_default_generators REQUIRED)
-rosidl_generate_interfaces(
-  ${PROJECT_NAME}
-  "msg/Num128b.msg"
-  "msg/Num1kb.msg"
-  "msg/Num10kb.msg"
-  "msg/Num100kb.msg"
-  "msg/Num500kb.msg"
+
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Num.msg"
+  "srv/AddThreeInts.srv"
 )
+
 ament_package()
