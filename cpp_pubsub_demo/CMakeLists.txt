@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(cpp_pubsub)
+project(cpp_pubsub_demo)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
