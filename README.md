@@ -66,4 +66,4 @@ Created by [@CuongTran](https://github.com/scottitran) - feel free to contact me
 
 ---
 ## Author 
-  - **Tran Tien Cuong** (tran.tien.cuong@bench or cuongtdtqb@gmail.com)
+  - **Tran Tien Cuong** (tran.tien.cuong@bench.com or cuongtdtqb@gmail.com)
