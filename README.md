@@ -39,7 +39,7 @@ To run project demo, this respository need to be cloned.
 > `ros2 launch demo demo.launch.py`
 
 
-## Overview of parameters:
+## Overview of parameters used in demo:
 MSG_SIZE: Message sizes of the topic:
 - 128 Bytes
 - 1 Kilobyte
