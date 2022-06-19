@@ -22,10 +22,23 @@ Jetson Nano is the hardware used in this project to run ROS2. However, basic OS 
 - Upgrade Ubuntu 18.04 to Ubuntu 20.04 by follow [this tutorial](https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html)
 - Running Ubuntu 20.04 on Docker
 
+After successful install ubuntu, you need to install ROS2 environment by follow [this link](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
 
+## Clone this resposity 
+Always source ROS2 environment `source /opt/ros/foxy/setup.bash`.
+
+You need to created a ROS2 workspace to run ROS2 and Micro-ROS application:
+```
+mkdir -p ~/dev_ws/src
+cd ~/dev_ws/src
+ ```
+Then clone ROS2 and Micro-ROS code from this repository:
+
+> `git clone https://github.com/scottitran/ROS2-Micro-ROS-Benchmark.git`
+
+## Running 
 ## Build Demo
-To run project demo, this respository need to be cloned.
-- Then source code have to be build by using this command:
+To run project demo, you need to build demo package using the command:
 
 > `colcon build --packages-select demo`
 
@@ -39,16 +52,32 @@ To run project demo, this respository need to be cloned.
 > `ros2 launch demo demo.launch.py`
 
 
-## Overview of parameters:
+## Install and running demo by using Docker
+First, you have to install docker in your machine by follow [docker tutorial](https://docs.docker.com/engine/install/)
+
+After finishing clone this repository, you will have Dockerfiles folder. You need to open the terminal in this folder then build docker using this command:
+
+> `docker build -t <name_of_image>:<version>`
+
+Running Docker image in the network host:
+`docker run --rm -it --net_host --pid=host <Image_id>` which is check by using this command `docker images`
+
+when you come inside the docker image, you are already inside dev_ws folder. You only need to source workplace: 
+> `. install/setup.bash`
+
+Then run the demo program: 
+
+> `ros2 launch demo demo.launch.py`
+
+
+## Overview and use parameters:
 MSG_SIZE: Message sizes of the topic:
 - 128 Bytes 
 - 1 Kilobyte
 - 10 Kilobytes
 - 100 Kilobytes
 
-PUB_FREQUENCY (Hz):
-- Feature to be added 1
-- Feature to be added 2
+PUB_FREQUENCY (Hz)
 
 QoS profiles:
 - Reliability
@@ -56,6 +85,11 @@ QoS profiles:
 - History 
 - Depth
 
+To change parameters value inside ROS2 code when they are running. 
+
+1. Check the param available by: `ros2 param list`
+2. Set new param value: `ros2 param set /<publisher_or_subscriber_name> <param_name> <new_values>`
+For example in this demo, set new message size = 128B: `ros2 param set /publisher sub_num 30`
 
 ## Debug ROS2 Topic in terminal
 Below only include topic commands because this project only use _topic_ communication mechanism

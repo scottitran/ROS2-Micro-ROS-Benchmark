@@ -76,18 +76,6 @@ void parameter_callback(Parameter * param)
 				break;
 		}
 	}
-
-	if (strcmp(param->name.data, "msg_size") == 0){
-		switch (param ->value.type)
-		{
-			case RCLC_PARAMETER_INT:
-				MSG = param->value.integer_value;
-				break;
-			
-			default:
-				break;
-		}
-	}
 }
 
 void subscription_callback(const void * msgin)
@@ -98,6 +86,7 @@ void subscription_callback(const void * msgin)
 
 void appMain(void * arg)
 {
+	// Set LED pin to the Output Mode and set default is turn off
 	gpio_pad_select_gpio(RED_LED);
 	gpio_set_direction(RED_LED, GPIO_MODE_OUTPUT);
 
@@ -112,16 +101,19 @@ void appMain(void * arg)
 	// create node
 	rcl_node_t node;
 	rcl_node_options_t node_ops = rcl_node_get_default_options();
-	node_ops.domain_id = 4;
+
+	//set domain for this node to 4, so that every ROS2 node in the same domain and topic can communicate
+	node_ops.domain_id = 4;	
 	RCCHECK(rclc_node_init_with_options(&node, "ESP32", "", &support, &node_ops));
 
-	// create publisher
+	// create QoS Profiles for publisher
 	rmw_qos_profile_t pub_qos = rmw_qos_profile_default;
 	pub_qos.reliability = RMW_QOS_POLICY_RELIABILITY_RELIABLE;
 	pub_qos.history = RMW_QOS_POLICY_HISTORY_KEEP_ALL;
-	// pub_qos.depth = 1000;
+	pub_qos.depth = 1000;
 	pub_qos.durability = RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL;
 
+	// create publisher
 	RCCHECK(rclc_publisher_init(
 		&publisher,
 		&node,
@@ -129,13 +121,15 @@ void appMain(void * arg)
 		"ping_msg",
 		&pub_qos));
 
-	// create subscriber
+	
+	// create QoS Profiles for publisher
 	rmw_qos_profile_t sub_qos = rmw_qos_profile_default;
 	sub_qos.reliability = RMW_QOS_POLICY_RELIABILITY_RELIABLE;
 	sub_qos.history = RMW_QOS_POLICY_HISTORY_KEEP_ALL;
 	sub_qos.durability = RMW_QOS_POLICY_DURABILITY_TRANSIENT_LOCAL;
-	// sub_qos.depth = 1000;
+	sub_qos.depth = 1000;
 
+	// create subscriber
 	RCCHECK(rclc_subscription_init(
 		&subscriber,
 		&node,
@@ -162,24 +156,25 @@ void appMain(void * arg)
 
 	// add parameters
 	rcl_ret_t rc = rclc_add_parameter(&param_server, publish_rate, RCLC_PARAMETER_DOUBLE);
-	rcl_ret_t rc1 = rclc_add_parameter(&param_server, msg_size, RCLC_PARAMETER_INT);
 
+	// set parameter type
 	rc = rclc_parameter_set_double(&param_server, publish_rate, publish_rate_value);
-	rc1 = rclc_parameter_set_int(&param_server, msg_size, MSG);
 
+	// get new value from parameter 
 	rc = rclc_parameter_get_double(&param_server, publish_rate, &publish_rate_value);
-	rc1 = rclc_parameter_get_int(&param_server, msg_size, &MSG);
 
-////////////////////////////////////////////////////
+	// Assign dynamic memory to the ping_msg 
 	msg_sent.data.capacity = MSG;
 	msg_sent.data.data = (int32_t*) malloc(msg_sent.data.capacity * sizeof(int32_t));
 	msg_sent.data.size = 0;
 
+	// Fill random number into message
 	for (int32_t i =0; i < MSG; i++){	
-		msg_sent.data.data[i] = 1;//rand();
+		msg_sent.data.data[i] = rand();
 		msg_sent.data.size++;
 	}
 
+	// Assign dynamic memory to the pong_msg 
 	msg_receive.data.capacity = MSG;
 	msg_receive.data.data = (int32_t*) malloc(msg_receive.data.capacity * sizeof(int32_t));
 	msg_receive.data.size = 0;
