@@ -41,7 +41,7 @@ To run project demo, this respository need to be cloned.
 
 ## Overview of parameters:
 MSG_SIZE: Message sizes of the topic:
-- 128 Bytes
+- 128 Bytes 
 - 1 Kilobyte
 - 10 Kilobytes
 - 100 Kilobytes
