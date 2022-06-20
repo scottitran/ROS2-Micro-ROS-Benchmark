@@ -60,7 +60,7 @@ After finishing clone this repository, you will have Dockerfiles folder. You nee
 > `docker build -t <name_of_image>:<version>`
 
 Running Docker image in the network host:
-`docker run --rm -it --net_host --pid=host <Image_id>` which is checked by using this command `docker images`
+`docker run --rm -it --net=host --pid=host <Image_id>` which is checked by using this command `docker images`
 
 when you come inside the docker image, you are already inside dev_ws folder. You only need to source workplace: 
 > `. install/setup.bash`
