@@ -72,10 +72,10 @@ Then run the demo program:
 
 ## Overview and use parameters:
 MSG_SIZE: Message sizes of the topic:
-- 128 Bytes 
-- 1 Kilobyte
-- 10 Kilobytes
-- 100 Kilobytes
+- 128 Bytes (msg_num=30)
+- 1 Kilobyte (msg_num=246)
+- 10 Kilobytes (msg_num=2498)
+- 100 Kilobytes (msg_num=24998)
 
 PUB_FREQUENCY (Hz)
 
