@@ -24,7 +24,7 @@ RUN git clone https://github.com/scottitran/src.git
 RUN apt-get install python3-rosdep -y
 RUN rosdep init
 RUN rosdep update
-RUN apt-get install vim nano
+RUN apt-get install -y vim nano
 RUN apt install python3-colcon-common-extensions -y
 
 RUN echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
