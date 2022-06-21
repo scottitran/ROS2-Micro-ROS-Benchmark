@@ -5,11 +5,7 @@
 
 #include <rcl/rcl.h>
 #include <rcl/error_handling.h>
-#include <std_msgs/msg/int32.h>
-#include <std_msgs/msg/string.h>
 #include <std_msgs/msg/int32_multi_array.h>
-#include <std_msgs/msg/float32_multi_array.h>
-#include <tutorial_interfaces/msg/num.h>
 
 #include <rclc/rclc.h>
 #include <rclc/executor.h>

@@ -31,4 +31,3 @@ RUN echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 RUN rosdep install -i --from-path src --rosdistro foxy -y
 
 RUN colcon build
-RUN . install/setup.bash
