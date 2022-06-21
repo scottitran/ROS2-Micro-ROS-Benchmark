@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(tutorial_interfaces)
+project(demo_cpp)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -32,12 +32,16 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-find_package(rosidl_default_generators REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(tutorial_interfaces REQUIRED)
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/Num.msg"
-  "msg/Reliability_msg.msg"
-  "srv/AddThreeInts.srv"
-)
+add_executable(listener src/receiver.cpp)
+ament_target_dependencies(listener rclcpp std_msgs)
+ament_target_dependencies(listener rclcpp tutorial_interfaces)
+
+install(TARGETS
+  listener
+  DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
