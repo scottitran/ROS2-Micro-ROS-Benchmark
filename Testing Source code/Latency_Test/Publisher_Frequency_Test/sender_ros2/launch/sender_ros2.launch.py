@@ -17,7 +17,7 @@ def generate_launch_description():
             package='sender_ros2',
             # namespace='sub1',
             executable='talker',
-            name='publisher',
+            name='sender',
             parameters=[config]    
         )
  

@@ -1,4 +1,4 @@
-subscriber:
+receiver:
   ros__parameters:
     pong_pub_topic: "pong_msg"
     pong_sub_topic: "ping_msg"

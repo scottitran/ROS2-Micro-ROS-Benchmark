@@ -2,7 +2,6 @@ from setuptools import setup
 
 import os 
 from glob import glob
-
 package_name = 'receiver_ros2'
 
 setup(
@@ -18,10 +17,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='cuong1',
-    maintainer_email='cuong1@todo.todo',
+    maintainer='cuongt',
+    maintainer_email='cuongt@todo.todo',
     description='TODO: Package description',
-    license='Apache License 2.0',
+    license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

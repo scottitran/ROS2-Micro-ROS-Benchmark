@@ -7,7 +7,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     config = os.path.join(
-        get_package_share_directory('button'),
+        get_package_share_directory('receiver_ros2'),
         'config',
         'params.yaml'
         )
@@ -16,7 +16,7 @@ def generate_launch_description():
             package='receiver_ros2',
             # namespace='sub1',
             executable='listener',
-            name='subscriber',
+            name='receiver',
             parameters=[config] 
         )
 

@@ -17,10 +17,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='cuong',
-    maintainer_email='cuong@todo.todo',
+    maintainer='cuongt',
+    maintainer_email='cuongt@todo.todo',
     description='TODO: Package description',
-    license='Apache License 2.0',
+    license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

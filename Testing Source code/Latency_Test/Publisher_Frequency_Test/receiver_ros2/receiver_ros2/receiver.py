@@ -35,7 +35,7 @@ DEFAULT_QOS_DURABILITY_TRANSIENT_LOCAL = False
 
 class RECEIVER(Node):
     def __init__(self):
-        super().__init__('btn_sub')
+        super().__init__('receiver')
 
         # define configurable topic name through parameter
         self.MsgSize                        = DEFAULT_MSG_SIZE
