@@ -7,13 +7,13 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     config = os.path.join(
-        get_package_share_directory('button'),
+        get_package_share_directory('parallel_server'),
         'config',
         'params.yaml'
         )
 
     node_1 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber',
@@ -21,7 +21,7 @@ def generate_launch_description():
         )
 
     node_2 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber1',
@@ -29,14 +29,14 @@ def generate_launch_description():
         )
       
     node_3 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber2',
             parameters=[config] 
         )
     node_4 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber3',
@@ -44,7 +44,7 @@ def generate_launch_description():
         )
 
     node_5 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber4',
@@ -52,7 +52,7 @@ def generate_launch_description():
         )
 
     node_6 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber5',
@@ -60,7 +60,7 @@ def generate_launch_description():
         )
 
     node_7 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber6',
@@ -68,7 +68,7 @@ def generate_launch_description():
         )
 
     node_8 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber7',
@@ -76,7 +76,7 @@ def generate_launch_description():
         )
 
     node_9 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber8',
@@ -84,7 +84,7 @@ def generate_launch_description():
         )
 
     node_10 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber9',
@@ -92,7 +92,7 @@ def generate_launch_description():
         )
 
     node_11 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber10',
@@ -100,7 +100,7 @@ def generate_launch_description():
         )
 
     node_12 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber11',
@@ -108,7 +108,7 @@ def generate_launch_description():
         )
 
     node_13 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber12',
@@ -116,7 +116,7 @@ def generate_launch_description():
         )
 
     node_14 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber13',
@@ -124,7 +124,7 @@ def generate_launch_description():
         )
 
     node_15 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber14',
@@ -132,7 +132,7 @@ def generate_launch_description():
         )
 
     node_16 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber15',
@@ -140,14 +140,14 @@ def generate_launch_description():
         )
 
     node_17 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber16',
             parameters=[config] 
         )
     node_18 = Node(
-            package='button',
+            package='parallel_server',
             # namespace='sub1',
             executable='listener',
             name='subscriber17',

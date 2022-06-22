@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(Cpp_memory_test)
+project(cpp_memory_test)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)

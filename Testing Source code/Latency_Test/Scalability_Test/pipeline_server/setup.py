@@ -24,8 +24,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-		'talker = pipeline.publisher:main',
-          	'listener = pipeline.subscriber:main'
+		    'talker = pipeline_server.publisher:main',
+          	'listener = pipeline_server.subscriber:main'
         ],
     },
 )

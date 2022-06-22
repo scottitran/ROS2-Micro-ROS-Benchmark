@@ -7,7 +7,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     config = os.path.join(
-        get_package_share_directory('pipeline'),
+        get_package_share_directory('pipeline_server'),
         'config',
         'params.yaml'
         )
