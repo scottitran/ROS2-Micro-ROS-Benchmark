@@ -29,8 +29,8 @@ Always source ROS2 environment `source /opt/ros/foxy/setup.bash`.
 
 You need to create a ROS2 workspace to run ROS2 and Micro-ROS application:
 ```
-mkdir -p ~/dev_ws/src
-cd ~/dev_ws/src
+mkdir -p ~/dev_ws
+cd ~/dev_ws
  ```
 Then clone ROS2 and Micro-ROS code from this repository:
 
@@ -41,9 +41,13 @@ This instruction only for demo setup, the other testing can follow the same
 ## Build Demo
 To run project demo, you need to build a demo package using the command:
 
+- Build custom message first:
+> `colcon build --packages-select tutorial_interfaces`
+
+- Then build demo ROS2 program
 > `colcon build --packages-select demo`
 
-- then source ROS2 environment and source workplace: 
+- Source ROS2 environment and source workplace: 
 > `source /opt/ros/foxy/setup.bash`
 
 > `. install/setup.bash`
@@ -58,7 +62,7 @@ First, you have to install docker in your machine by following [docker tutorial]
 
 After finishing clone this repository, you will have Dockerfiles folder. You need to open the terminal in this folder then build docker using this command:
 
-> `docker build -t <name_of_image>:<version>`
+> `docker build -t <name_of_image>:<version> . `
 
 Running Docker image in the network host:
 `docker run --rm -it --net=host --pid=host <Image_id>` which is checked by using this command `docker images`

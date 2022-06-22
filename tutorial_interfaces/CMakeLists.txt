@@ -36,7 +36,7 @@ find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Num.msg"
-  "msg/Reliability_msg.msg"
+  "msg/Reliability.msg"
   "srv/AddThreeInts.srv"
 )
 

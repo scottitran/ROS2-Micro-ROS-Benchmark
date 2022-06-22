@@ -136,7 +136,7 @@ class RECEIVER(Node):
     def SubCallback(self,msg):
         dt = datetime.now()
         time_stamp = datetime.timestamp(dt) * 1000
-        self.get_logger().info('Hear from sender, response back from ROS2 using python {}'.format(dt))
+        self.get_logger().info('Hear from sender, response back from ROS2 {}'.format(dt))
         self.publisher_.publish(msg)
         
 

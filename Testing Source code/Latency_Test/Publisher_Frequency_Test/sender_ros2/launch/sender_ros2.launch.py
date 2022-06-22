@@ -8,7 +8,7 @@ def generate_launch_description():
     ld = LaunchDescription()
 
     config = os.path.join(
-        get_package_share_directory('button'),
+        get_package_share_directory('sender_ros2'),
         'config',
         'params.yaml'
         )
