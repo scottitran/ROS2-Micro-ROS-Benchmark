@@ -22,7 +22,7 @@ Jetson Nano is the hardware used in this project to run ROS2. However, basic OS 
 - Upgrade Ubuntu 18.04 to Ubuntu 20.04 by follow [this tutorial](https://qengineering.eu/install-ubuntu-20.04-on-jetson-nano.html)
 - Run Ubuntu 20.04 on Docker
 
-After successful installation of ubuntu, you need to install ROS2 environment by following [this link](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
+After successful installation of ubuntu, you need to install ROS2 environment by following [this link](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html) and Micro-ROS neccessary folder by follow this [link](https://micro.ros.org/docs/tutorials/core/first_application_linux/)
 
 ## Clone this resposity 
 Always source ROS2 environment `source /opt/ros/foxy/setup.bash`.
@@ -37,6 +37,7 @@ Then clone ROS2 and Micro-ROS code from this repository:
 > `git clone https://github.com/scottitran/ROS2-Micro-ROS-Benchmark.git`
 
 ## Running 
+This instruction only for demo setup, the other testing can follow the same
 ## Build Demo
 To run project demo, you need to build a demo package using the command:
 
@@ -89,7 +90,7 @@ To change parameters value inside ROS2 code when they are running.
 
 1. Check the param available by: `ros2 param list`
 2. Set new param value: `ros2 param set /<publisher_or_subscriber_name> <param_name> <new_values>`
-For example in this demo, set new message size = 128B: `ros2 param set /publisher sub_num 30`
+For example in this demo, to set new message size = 128B: `ros2 param set /sender sub_num 30` or publisher frequency = 10 Hz: `ros2 param set /sender pub_frequency 0.1`
 
 ## Debug ROS2 Topic in terminal
 Below only include topic commands because this project only used _topic_ communication mechanism
