@@ -1,9 +1,0 @@
-subscriber:
-  ros__parameters:
-    pong_pub_topic: "pong_msg"
-    pong_sub_topic: "ping_msg"
-
-    qos_depth:  1000
-    qos_best_effort: True
-    qos_durability_transient_local: False
-    qos_history_keep_all: False
