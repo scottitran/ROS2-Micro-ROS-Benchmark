@@ -30,4 +30,5 @@ RUN apt install python3-colcon-common-extensions -y
 RUN echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 RUN rosdep install -i --from-path src --rosdistro foxy -y
 
+# build it!
 RUN colcon build
