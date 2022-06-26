@@ -37,7 +37,7 @@ Then clone ROS2 and Micro-ROS code from this repository:
 > `git clone https://github.com/scottitran/ROS2-Micro-ROS-Benchmark.git`
 
 ## Running 
-This instruction only for demo setup, the other testing can follow the same
+This instruction is only for demo setup, the other testing can follow the same process
 ## Build Demo
 To run project demo, you need to build a demo package using the command:
 
@@ -57,7 +57,7 @@ To run project demo, you need to build a demo package using the command:
 > `ros2 launch demo demo.launch.py`
 
 
-## Install and running demo by using Docker
+## Install and run demo by using Docker
 First, you have to install docker in your machine by following [docker tutorial](https://docs.docker.com/engine/install/)
 
 After finishing clone this repository, you will have Dockerfiles folder. You need to open the terminal in this folder then build docker using this command:
@@ -97,10 +97,10 @@ To change parameters value inside ROS2 code when they are running.
 For example in this demo, to set new message size = 128B: `ros2 param set /sender sub_num 30` or publisher frequency = 10 Hz: `ros2 param set /sender pub_frequency 0.1`
 
 ## Debug ROS2 Topic in terminal
-Below only include topic commands because this project only used _topic_ communication mechanism
+Below only includes topic commands because this project only used _topic_ communication mechanism
 - `ros2 topic list`: to see all of topics which are running in the network.
-- `ros2 topic echo /<topic_name>`: all of data in message will be shown in terminal 
-- `ros2 topic info /<topic_name> -v`: this command will check all the information of topic such as _msg_type_, _QoS_Profile_. Morverover, it also checks how many publishers and subscribers using this topic to communicate
+- `ros2 topic echo /<topic_name>`: all data in message will be shown in terminal 
+- `ros2 topic info /<topic_name> -v`: this command will check all the information of topic such as _msg_type_, _QoS_Profile_. Morverover, it also checks how many publishers and subscribers use this topic to communicate
 - `ros2 topic hz /<topic_name>`: to check the _min_, _max_ and _average_ value of publisher frequency of this topic
 - `ros2 topic bw /<topic_name>`: to check the _min_, _max_ and _average_ value of how much message size used in this topic
 
